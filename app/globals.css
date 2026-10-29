@@ -158,15 +158,18 @@ a { color: inherit; }
 .field input:focus { border-color: var(--white); }
 .field input::placeholder { color: #4c4c4c; }
 .join-form fieldset { margin: 0 0 44px; padding: 0; border: 0; }
-.role-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
-.role-option { position: relative; min-height: 60px; display: flex; align-items: center; padding: 0 16px; border-bottom: 1px solid var(--line); color: var(--gray); cursor: pointer; transition: color .2s ease, background .2s ease; }
-.role-option:nth-child(odd) { border-right: 1px solid var(--line); }
+.role-list { border-top: 1px solid var(--line); }
+.role-option { position: relative; min-height: 92px; display: flex; align-items: center; padding: 18px 16px; border-bottom: 1px solid var(--line); color: var(--gray); cursor: pointer; transition: color .2s ease, background .2s ease; }
 .role-option input { position: absolute; opacity: 0; pointer-events: none; }
-.role-option span { font-size: 13px; }
+.role-option > span { display: grid; grid-template-columns: minmax(230px, .9fr) minmax(130px, .55fr) 1.3fr; align-items: baseline; gap: 18px; width: calc(100% - 26px); }
+.role-option strong { color: inherit; font-size: 14px; font-weight: 600; }
+.role-option small { font-size: 11px; }
+.role-option em { color: var(--dim); font-size: 11px; font-style: normal; line-height: 1.55; }
 .role-option::after { content: ""; width: 6px; height: 6px; margin-left: auto; border: 1px solid #555; border-radius: 50%; }
 .role-option:hover, .role-option.selected { color: var(--white); background: #111; }
 .role-option.selected::after { border-color: var(--white); background: var(--white); }
 .custom-field { margin-top: -12px; }
+.vacancy-strip { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; margin: 0 0 32px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--gray); font-size: 9px; font-weight: 700; letter-spacing: .18em; }
 .equal-note { display: grid; grid-template-columns: 130px 1fr; gap: 22px; margin-bottom: 34px; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .equal-note span { font-size: 10px; font-weight: 700; letter-spacing: .18em; }
 .equal-note p { margin: 0; color: var(--gray); font-size: 13px; line-height: 1.6; }
@@ -192,14 +195,24 @@ a { color: inherit; }
 .dark-document header small { margin-top: 3px; color: var(--gray); font-size: 7px; }
 .dark-document header i { margin-left: auto; color: var(--dim); font-size: 7px; font-style: normal; letter-spacing: .12em; }
 .offer-preview { min-height: 760px; display: flex; flex-direction: column; padding: clamp(28px, 4vw, 58px); }
-.offer-preview > div { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-.offer-preview > div > p:first-child { color: var(--gray); font-size: 8px; letter-spacing: .2em; }
+.offer-preview > .offer-body { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.offer-preview > .offer-body > p:first-child { color: var(--gray); font-size: 8px; letter-spacing: .2em; }
 .offer-preview h2 { margin: 16px 0 50px; font-size: clamp(72px, 9vw, 130px); line-height: .8; letter-spacing: -.07em; }
-.offer-preview div > span { color: var(--gray); font-size: 11px; }
+.offer-preview .offer-body > span { max-width: 620px; color: var(--gray); font-size: 11px; line-height: 1.6; }
+.offer-preview .offer-body > span strong { color: var(--white); font-weight: 600; }
 .offer-preview h3 { margin: 10px 0 28px; overflow-wrap: anywhere; font-size: clamp(30px, 4vw, 54px); line-height: 1; letter-spacing: -.04em; }
 .offer-preview h4 { margin: 9px 0 24px; overflow-wrap: anywhere; font-size: clamp(22px, 3vw, 38px); line-height: 1.1; letter-spacing: -.035em; }
-.offer-preview > div > p:last-child { color: var(--gray); font-size: 11px; }
+.offer-preview .offer-body > p:last-child { color: var(--gray); font-size: 11px; }
 .dark-document footer { justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--line); color: var(--dim); font-size: 8px; letter-spacing: .12em; }
+.dark-document .offer-footer { align-items: end; gap: 24px; }
+.offer-footer > div:first-child { display: flex; flex: 1; flex-direction: column; gap: 8px; }
+.offer-footer span { display: grid; grid-template-columns: 84px 1fr; gap: 10px; }
+.offer-footer span b { color: var(--gray); font-weight: 500; letter-spacing: .04em; }
+.offer-footer small { max-width: 440px; margin-top: 5px; color: #555; font-size: 7px; line-height: 1.5; letter-spacing: .06em; }
+.offer-qr { flex: 0 0 124px; display: flex; flex-direction: column; align-items: center; gap: 5px; color: var(--white); text-align: center; }
+.offer-qr canvas { width: 124px !important; height: 124px !important; background: var(--white); }
+.offer-qr b { font-size: 7px; letter-spacing: .16em; }
+.offer-qr small { max-width: 124px; margin: 0; overflow-wrap: anywhere; font-size: 5px; }
 .badge-preview { aspect-ratio: 1.58; display: flex; flex-direction: column; padding: clamp(24px, 3vw, 40px); }
 .badge-preview > div { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 .badge-preview h3 { margin: 0 0 12px; overflow-wrap: anywhere; font-size: clamp(28px, 4vw, 48px); line-height: 1; letter-spacing: -.045em; }
@@ -276,9 +289,9 @@ a { color: inherit; }
   .equality-section p { grid-column: 1; margin-top: 48px; }
   .career-facts { flex-wrap: wrap; gap: 14px 22px; }
   .join-section { padding-top: 72px; }
-  .role-grid { grid-template-columns: 1fr; }
-  .role-option:nth-child(odd) { border-right: 0; }
-  .role-option { min-height: 56px; padding-left: 12px; }
+  .role-option { min-height: 116px; padding: 18px 12px; }
+  .role-option > span { grid-template-columns: 1fr auto; gap: 7px 14px; }
+  .role-option em { grid-column: 1 / -1; }
   .equal-note { grid-template-columns: 1fr; }
   .credential-studio { padding: 74px 18px 100px; }
   .welcome-copy { min-height: 55svh; }
@@ -287,6 +300,8 @@ a { color: inherit; }
   .offer-preview h2 { font-size: 70px; }
   .offer-preview h3 { font-size: 34px; }
   .offer-preview h4 { font-size: 25px; }
+  .dark-document .offer-footer { align-items: flex-start; flex-direction: column; }
+  .offer-qr { align-self: flex-end; }
   .badge-preview { padding: 22px; }
   .badge-preview header i { max-width: 90px; text-align: right; }
   .download-actions { grid-template-columns: 1fr; }

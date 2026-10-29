@@ -8,7 +8,7 @@ export default function CareersPage() {
         <p className="overline">CAREERS / ONE-CLICK ONBOARDING</p>
         <h1>YOUR CAREER.<br /><em>YOUR RULES.</em></h1>
         <p className="page-intro">No Resume. No Interview. No Rejection.</p>
-        <div className="career-facts"><span>NO ACCOUNT</span><span>NO CV</span><span>NO HIERARCHY</span></div>
+        <div className="career-facts"><span>REMOTE</span><span>$0 / YEAR</span><span>UNLIMITED VACANCIES</span></div>
       </section>
       <section className="join-section section" id="join">
         <div className="join-heading"><p className="overline">BECOME ANYTHING</p><h2>CHOOSE A NAME.<br />CHOOSE A TITLE.</h2><p>That is the entire application.</p></div>

@@ -11,7 +11,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <div><strong>NOTHING INC.</strong><span>无事集团 · A VIRTUAL COMMUNITY</span></div>
         <nav aria-label="Footer navigation"><a href="/about">About</a><a href="/careers">Careers</a><a href="/careers#join">Join Us</a></nav>
         <p>Do Nothing. Be Everything.</p>
-        <small>© {new Date().getFullYear()} Nothing Inc. No tracking. No database. Virtual membership only.</small>
+        <small>© {new Date().getFullYear()} Nothing Inc. No accounts. Minimal data. Virtual membership only.</small>
       </footer>
     </div>
   );
