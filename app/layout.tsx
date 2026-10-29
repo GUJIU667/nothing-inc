@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: { default: "Nothing Inc. | 无事集团", template: "%s — Nothing Inc." },
-  description: "无事集团是一个虚拟创意社区。Creating Infinite Possibilities.",
+  description: "Nothing Inc.（无事集团）是一个零层级虚拟创意社区。Your title. Your choice. Infinite possibilities.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 

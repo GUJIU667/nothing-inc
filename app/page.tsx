@@ -1,38 +1,47 @@
-import Link from "next/link";
 import { SiteShell } from "@/components/site-shell";
 
-const principles = [
-  ["01", "No ranks", "没有上下级，只有正在发生的想法。"],
-  ["02", "Choose your title", "你的称谓由你定义，也可以随时改变。"],
-  ["03", "Make nothing useful", "不以产出证明存在，但欢迎一切真实创造。"],
+const pillars = [
+  { number: "01", label: "MISSION", title: "Creating Infinite Possibilities.", copy: "We leave enough space for ideas that do not have names yet." },
+  { number: "02", label: "STRUCTURE", title: "One Level. Infinite Titles.", copy: "Every member is equal. A title describes you; it never ranks you." },
+  { number: "03", label: "FREEDOM", title: "Your Title. Your Choice.", copy: "No résumé, interview, or permission required. Choose what you want to become." },
 ];
 
 export default function Home() {
   return (
     <SiteShell>
-      <section className="hero grid-noise">
-        <div className="hero-orbit" aria-hidden="true" />
-        <p className="eyebrow">无事集团 · NOTHING INC. / EST. NOW</p>
-        <h1>Do Nothing.<br /><span>Be Everything.</span></h1>
-        <p className="hero-copy">一家不生产答案的虚拟集团。我们聚集好奇的人，创造无限可能。<br /><span>Creating Infinite Possibilities.</span></p>
-        <div className="hero-actions">
-          <Link className="button button-light" href="/welcome">加入无事 / Enter</Link>
-          <Link className="text-link" href="/about">Read the non-manifesto ↗</Link>
+      <section className="home-hero">
+        <div className="hero-signal" aria-hidden="true"><span>N</span><span>Ø</span></div>
+        <p className="overline reveal-up">NOTHING INC. / 无事集团</p>
+        <h1 className="reveal-up delay-1">THE FUTURE<br />IS <em>NOTHING.</em></h1>
+        <div className="hero-bottom reveal-up delay-2">
+          <div><p className="manifesto">Do Nothing. Be Everything.</p><span>Your title. Your choice. Infinite possibilities.</span></div>
+          <a className="action-button inline-action" href="/careers#join">BECOME ANYTHING ↗</a>
         </div>
-        <div className="hero-index" aria-hidden="true">N° 000</div>
+        <div className="scroll-cue">SCROLL TO NOTHING <i /></div>
       </section>
-      <section className="statement section-pad" aria-labelledby="mission-heading">
-        <div className="section-kicker">OUR ONLY MISSION</div>
-        <h2 id="mission-heading">Creating Infinite<br />Possibilities.</h2>
-        <p>我们相信，最有价值的事常常开始于“无事可做”。</p>
+
+      <section className="brand-thesis section">
+        <p className="overline">THE IDEA</p>
+        <h2>NOTHING IS NOT<br />THE ABSENCE OF <span>EVERYTHING.</span></h2>
+        <div className="split-copy"><p>It is the absence of limits.</p><p>无事，不是无所事事。它是一块没有标准答案、没有等级秩序、也没有必须成为谁的开放空间。</p></div>
       </section>
-      <section className="principles section-pad" aria-label="Community principles">
-        {principles.map(([index, title, copy]) => <article className="principle" key={index}><span>{index}</span><h3>{title}</h3><p>{copy}</p></article>)}
+
+      <section className="pillar-list section" aria-label="Nothing Inc. principles">
+        {pillars.map((pillar) => <article key={pillar.number}><span>{pillar.number}</span><small>{pillar.label}</small><h3>{pillar.title}</h3><p>{pillar.copy}</p></article>)}
       </section>
-      <section className="reveal section-pad">
-        <p className="eyebrow dark">A COMPANY WITH NOTHING TO HIDE</p>
-        <h2>职位是自选的。<br />Offer 是即时的。<br />自由是真的。</h2>
-        <Link className="button button-dark" href="/careers">Browse zero openings</Link>
+
+      <section className="zero-hierarchy section">
+        <p className="overline">ORGANIZATION CHART</p>
+        <div className="equal-line"><span>CEO</span><i /><span>INTERN</span><i /><span>YOU</span></div>
+        <h2>ZERO HIERARCHY.<br />TOTAL POSSIBILITY.</h2>
+        <p>CEO and intern are different titles on the same line. Authority is not included.</p>
+        <a className="text-arrow" href="/about">EXPLORE THE PHILOSOPHY ↗</a>
+      </section>
+
+      <section className="final-cta section">
+        <p className="overline">ONE CLICK. ZERO INTERVIEWS.</p>
+        <h2>WHAT WILL<br />YOU BECOME?</h2>
+        <a className="action-button inline-action inverted" href="/careers#join">JOIN NOTHING INC. ↗</a>
       </section>
     </SiteShell>
   );

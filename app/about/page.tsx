@@ -1,26 +1,36 @@
-import type { Metadata } from "next";
-import Link from "next/link";
 import { SiteShell } from "@/components/site-shell";
-
-export const metadata: Metadata = { title: "About" };
 
 export default function AboutPage() {
   return (
     <SiteShell>
-      <section className="page-hero grid-noise"><p className="eyebrow">ABOUT / 关于无事</p><h1>We are serious<br />about <em>nothing.</em></h1></section>
-      <section className="editorial section-pad">
-        <div className="section-kicker">THE NON-MANIFESTO</div>
-        <div className="editorial-copy">
-          <h2>无事，不是无所事事。</h2>
-          <p className="lead">它是一块没有 KPI、层级和标准答案的开放空间。</p>
-          <p>Nothing Inc.（无事集团）是一个虚拟创意社区。任何人都可以选择自己的称谓，带着尚未完成的想法加入，在不被“应该”定义的地方，试着创造一点新的可能。</p>
-          <p>我们没有办公室、考勤、薪酬、劳动合同或管理层。本站生成的 Offer 与员工卡均为纪念性数字作品，不构成真实录用、劳动或商业关系。</p>
-        </div>
+      <section className="page-hero">
+        <p className="overline">ABOUT / 关于无事</p>
+        <h1>THE COMPANY<br />OF <em>NOTHING.</em></h1>
+        <p className="page-intro">A virtual organization built for people who prefer possibility over permission.</p>
       </section>
-      <section className="facts section-pad">
-        <div><b>∞</b><span>POSSIBILITIES<br />可能性</span></div><div><b>0</b><span>LAYERS<br />管理层级</span></div><div><b>100%</b><span>SELF-SELECTED<br />自选称谓</span></div>
+
+      <section className="about-statement section">
+        <p className="overline">THE NON-MANIFESTO</p>
+        <h2>WE DO NOT MANAGE PEOPLE.<br />WE MAKE ROOM FOR THEM.</h2>
+        <p>Nothing Inc. is a virtual creative community. We have no office, attendance system, salary, legal officers, or management layer. What we do have is an open invitation to choose your own title and make something unexpected.</p>
       </section>
-      <section className="closing-cta"><h2>没有职位空缺。<br />只有你还没命名的角色。</h2><Link className="button button-light" href="/welcome">Name yours</Link></section>
+
+      <section className="about-principles section">
+        <article><span>MISSION</span><h2>Creating Infinite Possibilities.</h2><p>创造无限可能。Give unfinished ideas enough room to become real.</p></article>
+        <article><span>VISION</span><h2>Making work a choice, and freedom a way of life.</h2><p>让工作成为选择，让自由成为生活方式。</p></article>
+        <article><span>ORGANIZATIONAL PHILOSOPHY</span><h2>One Level. Infinite Titles.</h2><p>所有成员拥有平等身份。CEO 与实习生只是在同一水平线上选择了不同称谓。</p></article>
+      </section>
+
+      <section className="equality-section section">
+        <div><span>CEO</span><span>01</span></div><div><span>EMPLOYEE</span><span>01</span></div><div><span>INTERN</span><span>01</span></div>
+        <p>Different names. Equal standing. Titles at Nothing Inc. express identity—not legal authority, seniority, or an employment relationship.</p>
+      </section>
+
+      <section className="final-cta section">
+        <p className="overline">NO VACANCIES. INFINITE OPENINGS.</p>
+        <h2>CHOOSE YOUR<br />OWN TITLE.</h2>
+        <a className="action-button inline-action inverted" href="/careers#join">BECOME ANYTHING ↗</a>
+      </section>
     </SiteShell>
   );
 }
