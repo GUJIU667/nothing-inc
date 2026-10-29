@@ -1,0 +1,13 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "nothing-inc-cn",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-10-29",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "nothing-inc-cn",
+      "database_id": "43d780eb-207e-4e9c-9a1e-80313595ab5c"
+    }
+  ]
+}
